@@ -1,0 +1,18 @@
+{
+  "name": "studiovista-personalbranding",
+  "version": "1.0.0",
+  "description": "personal branding project using webpack, backbone and underscore.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "personal",
+    "branding",
+    "webpack",
+    "backbone",
+    "underscore"
+  ],
+  "author": "Amir Tavakoli",
+  "license": "ISC"
+}

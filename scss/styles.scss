@@ -1,0 +1,13 @@
+// variables
+$primary-color: #20262e;
+
+
+.row{
+    .col-sm-10{
+        color: $primary-color;
+    }
+    .col-sm-2{
+        background-color: $primary-color;
+        color:#ddd;
+    }   
+}
