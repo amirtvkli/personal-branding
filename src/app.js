@@ -1,6 +1,6 @@
 var _ = require('underscore');
 var $ = require('jquery');
-const { dd } = require('dumper.js');
+const { dump } = require('dumper.js');
 require('backbone');
 var AppView = require('./app.view')
 $(function() {
@@ -14,5 +14,5 @@ $(function() {
     { user: 'pebbles', age: 1, active: true, createdAt: new Date(), getAge: () => this.age }
   ];
 
-  dd(users);
+  dump(users);
 });

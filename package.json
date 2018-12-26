@@ -5,8 +5,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --watch --mode production",
+    "dev": "webpack --watch --mode development"
   },
   "keywords": [
     "personal",
@@ -23,9 +23,12 @@
     "babel-loader": "^8.0.4",
     "backbone": "^1.3.3",
     "dumper.js": "^1.3.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
     "jasmine-core": "^3.3.0",
     "jquery": "^3.3.1",
     "lodash": "^4.17.11",
+    "pug-html-loader": "^1.1.5",
     "underscore": "^1.9.1",
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2"
