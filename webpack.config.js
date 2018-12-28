@@ -59,6 +59,11 @@ const config = {
             filename: 'about.html',
             template: 'src/app/pages/about.pug',
             inject: false
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'contact.html',
+            template: 'src/app/pages/contact.pug',
+            inject: false
         })
         
     ]

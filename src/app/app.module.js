@@ -1,4 +1,9 @@
 import { User } from './models/user';
+import BioGrapy from './components/bio-grapy/bio-grapy.component';
+
 let user = new User();
 
-console.log(user.getUsers());
+let bio = new BioGrapy({
+   el: 'bio-grapy'
+});
+
