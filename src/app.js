@@ -1,7 +1,11 @@
-// var _ = require('underscore');
-// var $ = require('jquery');
-// const { dump } = require('dumper.js');
-// require('backbone');
-// var AppView = require('./app.view')
-// var BioGrapy = require('./app/components/bio-grapy/bio-grapy.component');
-import './app/app.module';
+import { User } from './models/user';
+import BioGrapy from './views/components/bio-grapy/bio-grapy.component';
+import 'normalize.css';
+import 'styles/_app.scss';
+
+let user = new User();
+
+let bio = new BioGrapy({
+   el: 'bio-grapy'
+});
+
