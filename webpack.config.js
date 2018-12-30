@@ -29,10 +29,24 @@ const pug = {
     use: ['html-loader?attrs=false', 'pug-html-loader']
 };
 
+const js = {
+    enforce: 'pre',
+    test: /\.js$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader"
+    }
+}
+
 const ts = {
     test: /\.tsx?$/,
     use: 'ts-loader',
     exclude: /node_modules/
+};
+
+const tsx = {
+    test: /\.tsx?$/,
+    use: 'awesome-typescript-loader'
 };
 
 const css = {
@@ -80,8 +94,7 @@ module.exports = env => {
     return {
         //context: path.resolve(__dirname, 'src'),
         entry: {
-            main: './src/app.js',
-            print: './src/print.js'
+            main: './src/app.tsx',
         },
         output: {
             path: path.resolve(__dirname, 'public'),
@@ -92,16 +105,20 @@ module.exports = env => {
             contentBase: './public'
         },
         module: {
-            rules: [pug, ts, css, scss, img, font, video]
+            rules: [pug, ts, js, css, scss, img, font, video]
         },
         resolve: {
-            extensions: ['.tsx', '.ts', '.js'],
+            extensions: ['.tsx', '.ts', '.js', '.jsx', 'json'],
             alias: {
                 source: path.resolve(__dirname, './src'),
                 assets: path.resolve(__dirname,'./src/assets'),
                 images: path.resolve(__dirname,'./src/assets/images'),
             },
             modules: ['assets','node_modules']
+        },
+        externals: {
+            "react": "React",
+            "react-dom": "ReactDOM"
         },
         plugins: [
             new ExtractTextPlugin({

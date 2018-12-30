@@ -37,8 +37,10 @@ html(lang="en")
         block header
             include ../components/header
         block content
-        bio-grapy
+        div#example
         block footer
             include ../components/footer
+
+    script(crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js" )
+    script(crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" )
     script(src="main.bundle.js")
-    script(src="print.bundle.js")
