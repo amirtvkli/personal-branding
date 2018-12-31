@@ -63,13 +63,20 @@ const scss = {
     ]
 }
 
-const img = {
+const file = {
     test: /\.(png|jpe?g|gif|svg|ico)(\?.*)?$/,
     loader: 'url-loader', 
     options: {
         limit: 10000,
-        name: 'assets/fonts/[name].[hash:7].[ext]'
+        name: 'assets/images/[name].[hash:7].[ext]'
     }
+};
+
+const img = {
+    test: /\.(png|svg|jpg|gif)$/,
+             use: [
+               'file-loader'
+             ]
 };
 
 const font = {
@@ -86,7 +93,7 @@ const video = {
     loader: 'url-loader', 
     options: {
         limit: 10000,
-        name: 'assets/fonts/[name].[hash:7].[ext]'
+        name: 'assets/video/[name].[hash:7].[ext]'
     }
 };
 
@@ -105,7 +112,7 @@ module.exports = env => {
             contentBase: './public'
         },
         module: {
-            rules: [pug, ts, js, css, scss, img, font, video]
+            rules: [pug, tsx, js, css, scss, file, font, video]
         },
         resolve: {
             extensions: ['.tsx', '.ts', '.js', '.jsx', 'json'],
@@ -116,10 +123,10 @@ module.exports = env => {
             },
             modules: ['assets','node_modules']
         },
-        externals: {
-            "react": "React",
-            "react-dom": "ReactDOM"
-        },
+        // externals: {
+        //     "react": "React",
+        //     "react-dom": "ReactDOM"
+        // },
         plugins: [
             new ExtractTextPlugin({
                 filename:"assets/css/[name].bundle.css",
@@ -138,8 +145,12 @@ module.exports = env => {
             }), 
             new HtmlWebpackPlugin({
                 filename: 'index.html',
-                template: 'src/views/index.pug',
+                template: 'src/app/index.pug',
                 inject: false
+            }),
+            new webpack.ProvidePlugin({
+                "React": "react",
+                "ReactDOM": "react-dom"
             }),
             
             // pages

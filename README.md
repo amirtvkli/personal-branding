@@ -1,4 +1,5 @@
 # personal-branding
+
 Webpack project starter with Pug, Sass and jQuery. 
 =====================
 
@@ -10,6 +11,7 @@ also using pug instead of html and scss instead of css.
 - Templating: `pug`
 - Styling: `Sass`
 - Scripting: `Typescript` 
+- Frameworks: `React`
 
 # Features
 
