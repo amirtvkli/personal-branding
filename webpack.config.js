@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 let extractHtml = new ExtractTextPlugin('[name].html');
 
 // Files
@@ -19,7 +20,7 @@ let pathsToClean = [
 let patterns = [
     { from: './manifest.json', to: 'manifest.json' },
     { from: './browserconfig.xml', to: 'browserconfig.xml' },
-    // { from: 'assets/images/favicon/android-chrome-192x192.png', to: 'assets/images/android-chrome-192x192.png' },
+    { from: 'assets/images/favicon/android-chrome-192x192.png', to: 'assets/images/android-chrome-192x192.png' },
     // { from: 'assets/images/favicon/android-chrome-256x256.png', to: 'assets/images/android-chrome-256x256.png' },
     // { from: 'assets/images/favicon/mstile-150x150.png', to: 'assets/images/mstile-150x150.png' }
 ];
@@ -46,7 +47,11 @@ const ts = {
 
 const tsx = {
     test: /\.tsx?$/,
-    use: 'awesome-typescript-loader'
+    exclude: /node_modules/,
+    loader: 'awesome-typescript-loader',
+    options: {
+        useBabel: true
+    }
 };
 
 const css = {
@@ -101,7 +106,13 @@ module.exports = env => {
     return {
         //context: path.resolve(__dirname, 'src'),
         entry: {
-            main: './src/app.tsx',
+            app: './src/index.tsx',
+            //appStyles: './src/assets/styles/_app.scss',
+            vendor: [
+                'react',
+                'react-dom',
+                'react-router-dom'
+            ]
         },
         output: {
             path: path.resolve(__dirname, 'public'),
@@ -146,15 +157,20 @@ module.exports = env => {
             new HtmlWebpackPlugin({
                 filename: 'index.html',
                 template: 'src/app/index.pug',
+                hash: true,
                 inject: false
             }),
             new webpack.ProvidePlugin({
                 "React": "react",
                 "ReactDOM": "react-dom"
             }),
+            // new MiniCssExtractPlugin({
+            //     filename: "[name].css",
+            //     chunkFilename: "[id].css"
+            // }),
             
             // pages
-            ...utils.pages(env),
+            //...utils.pages(env),
             
         ]
     };

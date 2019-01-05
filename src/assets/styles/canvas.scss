@@ -1,0 +1,59 @@
+@import './variables';
+
+.__canvas{
+    //z-index: 0;
+    height: 100%;
+    .__section{
+        position: absolute;
+        padding: 2.4rem 2.5rem;
+        width: 100%;
+    }
+    .__top{
+        top:0;  
+        .navigation__button{
+            position: fixed;
+            height: 2.1rem;
+            right: 3.5rem;
+            top: 2.5rem;
+            .navigation__button__icon{
+                display: inline-block;
+                margin-right: .5rem;
+                vertical-align: middle;
+            }
+            .navigation__button__icon::before,.navigation__button__icon::after{
+                display: block;
+                background: $primary-foreground-color;
+                content: "";
+                width: 20px;
+                height: 1px;
+            }
+            .navigation__button__icon::after{
+                margin-top: 5px;
+            }
+            .navigation__button__text{
+                font-size: $small;
+                display: inline-block;
+                transition: letter-spacing .5s ease;
+                width: 3rem;
+            }
+            .navigation__button__text:hover{
+                letter-spacing: 3px;
+            }
+        }
+    }
+    .__bottom{
+        bottom: 0;
+        color: $primary-foreground-color;
+        background-color: $background-color;
+        .__social_links{
+            // transform: rotate(-90deg) translatey(100%);
+            // transform-origin: left bottom;
+            text-align: center;
+            padding: 8px 0;
+        }
+        .__copyright{
+            text-align: center;
+            font-size: $extra-small;
+        }
+    }
+}
