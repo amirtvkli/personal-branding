@@ -1,0 +1,27 @@
+.__avatar_canvas{
+    width: 65%;
+    position: fixed;
+    top: 1%;
+    left: 16%;
+    filter: blur(0px);
+    -webkit-animation: blur 50s linear forwards;
+    -o-animation: blur 50s linear forwards;
+    -moz-animation: blur 50s linear forwards;
+    animation: blur 50s linear forwards;
+
+    fill: none;
+    @-webkit-keyframes blur {   
+        30% {
+            filter: blur(0px);
+        }
+        // 95% {
+        //     filter: blur(1px);
+        // }
+        // 100% {
+        //     filter: blur(10px);
+        // }
+    }
+    .__avatar{
+        height: 200%;
+    }
+}

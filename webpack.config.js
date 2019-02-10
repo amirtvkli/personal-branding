@@ -20,7 +20,7 @@ let pathsToClean = [
 let patterns = [
     { from: './manifest.json', to: 'manifest.json' },
     { from: './browserconfig.xml', to: 'browserconfig.xml' },
-    { from: 'assets/images/favicon/android-chrome-192x192.png', to: 'assets/images/android-chrome-192x192.png' },
+    //{ from: 'assets/images/favicon/android-chrome-192x192.png', to: 'assets/images/android-chrome-192x192.png' },
     // { from: 'assets/images/favicon/android-chrome-256x256.png', to: 'assets/images/android-chrome-256x256.png' },
     // { from: 'assets/images/favicon/mstile-150x150.png', to: 'assets/images/mstile-150x150.png' }
 ];
@@ -111,7 +111,8 @@ module.exports = env => {
             vendor: [
                 'react',
                 'react-dom',
-                'react-router-dom'
+                'react-router-dom',
+                'gsap'
             ]
         },
         output: {

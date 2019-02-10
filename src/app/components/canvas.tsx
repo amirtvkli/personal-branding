@@ -1,6 +1,7 @@
 import * as React from "react";
 declare var require: any;
-import { Logo } from './logo';
+import { Logo, BiographyWelcome } from './index';
+import { Link } from 'react-router-dom';
 
 export const Canvas: React.StatelessComponent<{}> = () => {
     return (
@@ -8,13 +9,16 @@ export const Canvas: React.StatelessComponent<{}> = () => {
         <div className="__canvas">
             <div className="row justify-content-between align-items-center __section __top">
                 <Logo/>
-                <button title="Open Menu" className="navigation__button">
-                    <span className="navigation__button__icon"></span>
-                    <span className="navigation__button__text">
-                    Menu
+                <button  title="Open Menu" className="toggle__menu">
+                    <span className="toggle__menu__icon"></span>
+                    <span className="toggle__menu__text">
+                        <Link className="nav-link" to="/menu">Menu</Link>
                     </span>
                 </button>
             </div>
+           <div className="row justify-content-between align-items-center biography__canvas">
+            <BiographyWelcome/>
+           </div>
             <div className="row justify-content-between align-items-center __section __bottom">
                     <nav className="col-12 col-sm-auto __social_links"> 
                         <a title="Github" className="icon icon-github" href="http://github.com/amirtvkli" target='_blank'></a>
