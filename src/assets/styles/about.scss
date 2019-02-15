@@ -1,0 +1,15 @@
+@import './variables';
+
+.page__container{
+   width: 100%;
+   height: 100vh;
+   padding-bottom: 50px;
+}
+.about{
+    background: 101% 36% url(http://amirtvkli.ir/wordpress/wp-content/uploads/2019/02/avatar.png) no-repeat;
+}
+.page__content{
+    p{
+        text-align: justify;
+    }
+}

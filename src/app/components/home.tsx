@@ -1,9 +1,25 @@
 import * as React from 'react';
+import { BiographyWelcome} from './index';
+import { Component } from 'react';
 
-export const Home: React.StatelessComponent<{}> = () => {
-    return (
-        <div className="row">
-         
+
+class Home extends Component{
+    
+    constructor(props?: any, context?: any){
+        super(props,context);
+    }
+
+    componentDidMount(){
+       
+    }
+    
+    render(){   
+        return (
+             <div className="row justify-content-between align-items-center biography__canvas">
+            <BiographyWelcome/>
         </div>
-    )
+        )
+    }
 }
+
+export default Home;

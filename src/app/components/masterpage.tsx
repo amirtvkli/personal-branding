@@ -2,8 +2,9 @@ import * as React from "react";
 declare var require: any;
 import { Logo, BiographyWelcome } from './index';
 import { Link } from 'react-router-dom';
+import Folio from "./folio";
 
-export const Canvas: React.StatelessComponent<{}> = () => {
+export const MasterPage: React.StatelessComponent<{}> = () => {
     return (
 
         <div className="__canvas">
@@ -16,9 +17,7 @@ export const Canvas: React.StatelessComponent<{}> = () => {
                     </span>
                 </button>
             </div>
-           <div className="row justify-content-between align-items-center biography__canvas">
-            <BiographyWelcome/>
-           </div>
+        
             <div className="row justify-content-between align-items-center __section __bottom">
                     <nav className="col-12 col-sm-auto __social_links"> 
                         <a title="Github" className="icon icon-github" href="http://github.com/amirtvkli" target='_blank'></a>

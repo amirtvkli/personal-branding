@@ -2,7 +2,8 @@
 @import './variables';
 
 .toggle__menu{
-    display: none;
+    z-index: 90;
+    //display: none;
     position: fixed;
     height: 2.1rem;
     right: 3.5rem;
