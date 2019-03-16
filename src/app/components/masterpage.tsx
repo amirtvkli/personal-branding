@@ -28,7 +28,7 @@ export const MasterPage: React.StatelessComponent<{}> = () => {
                         {/* <a className="icon icon-instagram" href="http://instagram.com/amirtvkl" target='_blank'></a> */}
                     </nav>
                     <div className="col-12 col-sm-auto justify-content-end __copyright">
-                        <span>0.1.7 @ 2018-2019</span>
+                        <span>2018-2019 @ 0.1.7</span>
                     </div>
             </div>
         </div>
