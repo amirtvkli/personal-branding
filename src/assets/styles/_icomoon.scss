@@ -37,8 +37,6 @@ $icon-goodreads: "\e900";
 
   &:hover {
     // width: 50px;
-    background-color: black;
-    color: white;
     border-radius: 5px;
     justify-content: center;
     align-items: center;
@@ -48,7 +46,7 @@ $icon-goodreads: "\e900";
 }
 @keyframes growth{
   0%   { opacity:0; }
-  100% { opacity:.8; }
+  100% { opacity:.9; }
 }
 
 .icon-setting {
