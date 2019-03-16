@@ -8,6 +8,7 @@ $icon-twitter: "\ea96";
 $icon-behance: "\eaa8";
 $icon-github: "\eab0";
 $icon-linkedin: "\eaca";
+$icon-goodreads: "\e900";
 
 
 @font-face {
@@ -63,6 +64,11 @@ $icon-linkedin: "\eaca";
   .icon-linkedin {
     &:before {
       content: $icon-linkedin; 
+    }
+  }
+  .icon-goodreads {
+    &::before {
+      content: $icon-goodreads;
     }
   }
   

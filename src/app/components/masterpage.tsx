@@ -24,10 +24,11 @@ export const MasterPage: React.StatelessComponent<{}> = () => {
                         <a title="Linkedin" className="icon icon-linkedin" href="http://linkedin.com/in/amirtvkli" target='_blank'></a>
                         <a title="Twitter" className="icon icon-twitter" href="http://twitter.com/amirtvkli" target='_blank'></a>
                         <a title="Behance" className="icon icon-behance" href="https://behance.net/amirtvkli" target='_blank'></a>
+                        <a title="Goodreads" className="icon icon-goodreads" href="https://goodreads.com/amirtvkli" target='_blank'></a>
                         {/* <a className="icon icon-instagram" href="http://instagram.com/amirtvkl" target='_blank'></a> */}
                     </nav>
                     <div className="col-12 col-sm-auto justify-content-end __copyright">
-                        <span>Design and developed by <a title="Studio Vista" href="http://studiovista.ir">Studio Vista</a> @ 2018. All rights reserved.</span>
+                        <span>0.1.7 @ 2018-2019</span>
                     </div>
             </div>
         </div>

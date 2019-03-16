@@ -1,9 +1,9 @@
 @import './variables';
 
 .__canvas{
-    z-index: 10;
     height: 100%;
     .__section{
+        z-index: 30;
         position: absolute;
         padding: 2.4rem 2.5rem;
         width: 100%;
