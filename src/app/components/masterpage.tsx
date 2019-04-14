@@ -4,7 +4,7 @@ import { Logo, BiographyWelcome } from './index';
 import { Link } from 'react-router-dom';
 import Folio from "./folio";
 
-export const MasterPage: React.StatelessComponent<{}> = () => {
+const MasterPage: React.StatelessComponent<{}> = () => {
     return (
 
         <div className="__canvas">
@@ -34,3 +34,5 @@ export const MasterPage: React.StatelessComponent<{}> = () => {
         </div>
     );
 };
+
+export default MasterPage;
