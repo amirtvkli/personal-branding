@@ -1,12 +1,8 @@
-import * as React from "react";
-declare var require: any;
-import { Logo, BiographyWelcome } from './index';
+import React from "react";
 import { Link } from 'react-router-dom';
-import Folio from "./folio";
+import Logo from './logo';
 
-const MasterPage: React.StatelessComponent<{}> = () => {
-    return (
-
+const MasterPage = () => 
         <div className="__canvas">
             <div className="row justify-content-between align-items-center __section __top">
                 <Logo/>
@@ -32,7 +28,5 @@ const MasterPage: React.StatelessComponent<{}> = () => {
                     </div>
             </div>
         </div>
-    );
-};
 
 export default MasterPage;

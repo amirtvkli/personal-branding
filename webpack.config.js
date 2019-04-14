@@ -39,6 +39,12 @@ const js = {
     }
 }
 
+const jsx ={
+    test: /\.(js|jsx)$/,
+    exclude: /node_modules/,
+    use: ['babel-loader']
+}
+
 const ts = {
     test: /\.tsx?$/,
     use: 'ts-loader',
@@ -106,7 +112,7 @@ module.exports = env => {
     return {
         //context: path.resolve(__dirname, 'src'),
         entry: {
-            app: './src/index.tsx',
+            app: './src/index.jsx',
             //appStyles: './src/assets/styles/_app.scss',
             vendor: [
                 'react',
@@ -124,7 +130,7 @@ module.exports = env => {
             contentBase: './public'
         },
         module: {
-            rules: [pug, tsx, js, css, scss, file, font, video]
+            rules: [pug, css, scss, file, font, video, jsx]
         },
         resolve: {
             extensions: ['.tsx', '.ts', '.js', '.jsx', 'json'],
