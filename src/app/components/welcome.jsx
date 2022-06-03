@@ -154,14 +154,13 @@ export class Welcome extends React.Component {
             ref={(img) => (this.bowtie = img)}
           ></img>
           <div className="at-welcome__txt" ref={(div) => (this.txtFrame = div)}>
-            Welcome. My Name is Amir Tavakoli. About 7 years ago when I was
+            Welcome. My Name is Amir Tavakoli. Around 10 years ago when I was
             working as a project planner engineer in a project, I felt that a
             simple application tool was required. Thus, I decided to design and
             develop a simple app. It motivated me to study in Ms degree and
             improve my programming knowledge more and more. Simultaneously, I
             experienced designing of different user Interfaces and designing
-            lots of graphic projects. These experiences have led me to be a web
-            front-end developer who loves UI-UX.
+            lots of graphic projects. These experiences have led me to be a product manager right now.
           </div>
         </div>
         <Swipup />

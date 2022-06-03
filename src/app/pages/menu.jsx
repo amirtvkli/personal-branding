@@ -35,10 +35,8 @@ export class Menu extends React.Component {
               <div className="row">
                 <h5 className="at-menu__contents__title">Me in 10 seconds?</h5>
                 <p>
-                  I have been an engineer, a designer & front-end developer. I
-                  enjoy working through data, information, scenarios, and
-                  numbers to create impactful digital products. I'm introvert,
-                  slow thinker. Sirjan native, I now live in Esfahan, Iran.
+                  I'm product manager & team leader with 7+ years of experience in software development and helping tech companies grow and deliver outstanding mobile and web applications.
+                 I enjoy working through data, information, scenarios, and numbers to create impactful digital products.
                 </p>
               </div>
               <div className="row">
