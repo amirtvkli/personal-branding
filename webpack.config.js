@@ -70,7 +70,13 @@ const scss = {
     use: [
         "style-loader", // creates style nodes from JS strings
         "css-loader", // translates CSS into CommonJS
-        "sass-loader" // compiles Sass to CSS, using Node Sass by default
+        {
+            loader: 'sass-loader',
+            options: {
+              // Prefer `dart-sass`
+              implementation: require('sass'),
+            },
+          },
     ]
 }
 
@@ -112,7 +118,9 @@ module.exports = env => {
     return {
         //context: path.resolve(__dirname, 'src'),
         entry: {
+            styles:'./src/styles.jsx',
             app: './src/index.jsx',
+            gsap:'gsap',
             //appStyles: './src/assets/styles/_app.scss',
             vendor: [
                 'react',
@@ -168,8 +176,8 @@ module.exports = env => {
                 inject: false
             }),
             new webpack.ProvidePlugin({
-                "React": "react",
-                "ReactDOM": "react-dom"
+                React: "react",
+                ReactDOM: "react-dom"
             }),
             // new MiniCssExtractPlugin({
             //     filename: "[name].css",

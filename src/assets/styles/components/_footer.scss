@@ -1,0 +1,23 @@
+.at-footer {
+  display: flex;
+  flex-flow: row;
+  height: 72px;
+  padding: 0 24px;
+  
+  .at-footer__spacer {
+    flex: 0 0;
+  }
+  .at-footer-social-links {
+    display: none;
+  }
+  @include responsive('md') {
+    padding: 0 42px;
+    height: 52px;
+    .at-footer__spacer {
+      flex: 1 0;
+    }
+    .at-footer-social-links {
+      display: block;
+    }
+  }
+}

@@ -1,9 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { lazy, Suspense } from 'react';
+// import ReactDOM from 'react-dom';
 import AppRouter from './router';
-import './assets/styles/_app.scss';
+import { Loading } from './app/components';
 
-ReactDOM.render(
-  <AppRouter/>,
-  document.getElementById('root')
+
+const Lazy = lazy(
+  () =>
+    new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({
+          default: () => <AppRouter />,
+        });
+      }, 4000);
+    }),
 );
+
+const App = () => {
+  return (
+    <Suspense fallback={<Loading />}>
+      <Lazy />
+    </Suspense>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));

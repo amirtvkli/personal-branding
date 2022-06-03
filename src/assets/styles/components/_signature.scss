@@ -1,0 +1,27 @@
+@import '../variables';
+
+.at-signature {
+  text-align: left;
+  font-size: $extra-small;
+  position: relative;
+  user-select: none;
+  .at-welcome__bird {
+    position: absolute;
+    padding: 0;
+    bottom: -61px;
+    left: -50px;
+    transform: translateX(-32px) translateY(-32px) scale(0.4);
+    z-index: 5;
+    opacity: 0;
+
+    @include responsive('md') {
+      bottom: -81px;
+    }
+  }
+  .at-signature__quote{
+    display: block;
+  }
+  .at-signature__wirter{
+    display: block;
+  }
+}

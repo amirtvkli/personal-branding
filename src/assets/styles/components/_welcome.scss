@@ -1,0 +1,82 @@
+.at-welcome{
+  text-align: center;
+  position: relative;
+}
+.at-welcome__container {
+  margin: 0 auto;
+  width: 86%;
+  max-width: 340px;
+  justify-content: center;
+  align-items: center;
+  white-space: normal !important;
+  position: relative;
+  max-height: 300px;
+  overflow-y: hidden;
+  animation: at-welcome 0.4s ease-out;
+}
+
+@keyframes at-welcome {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.at-welcome__birds {
+  position: absolute;
+  padding: 0;
+  bottom: 254px;
+  max-width: 320px;
+  transform: scale(.25);
+  left: 20%;
+  z-index: 5;
+  opacity: 0;
+}
+.at-welcome__shirt {
+  position: absolute;
+  padding: 0;
+  bottom:5%;
+  width: 100%;
+  max-width: 320px;
+  transform: scale(.9) translateX(-55%);
+  left: 50%;
+  opacity: 0;
+  z-index: 5;
+  user-select: none;
+}
+.at-welcome__shirt--color {
+  position: absolute;
+  padding: 0;
+  bottom:0%;
+  width: 100%;
+  max-width: 320px;
+  transform: scale(.9) translateX(-55%);
+  left: 50%;
+  opacity: 0;
+  z-index: 6;
+}
+.at-welcome__bowtie {
+  position: absolute;
+  padding: 0;
+  bottom: -105px;
+  width: 100%;
+  transform: scale(0.22);
+  left: 0%;
+  opacity: 0;
+  z-index: 7;
+}
+
+.at-welcome__txt {
+  font-family: Montserrat;
+  line-height: 0.4;
+  font-size: 12pt;
+  color: white !important;
+  text-align: justify;
+  word-break: break-all;
+  user-select: none;
+  opacity: 0;
+  z-index: 3;
+}
+

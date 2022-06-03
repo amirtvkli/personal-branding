@@ -1,0 +1,47 @@
+// Modules
+@import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
+@import '../../../node_modules/normalize.css/normalize.css';
+
+@import './mixins/index.scss';
+@import './components/index.scss';
+@import './layouts/index.scss';
+@import './pages/index.scss';
+
+// Others
+@import './fonts';
+@import './variables';
+@import './icomoon';
+@import './canvas.scss';
+@import './avatar.scss';
+@import './components.scss';
+
+html, body, #root{
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: $montserrat;
+    width: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+.wrapper-md{
+    width:100%;
+    height: 100%;
+    // background-color: rgb(255, 204, 63);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container{
+        // background-color: rgb(248, 189, 28);
+        .not-found__action{
+            margin-top: 48px;
+        }
+    }
+}

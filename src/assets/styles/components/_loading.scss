@@ -1,0 +1,49 @@
+
+.at-loading__container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__logo{
+    width: 20px;
+  }
+}
+
+
+
+.at-loading {
+  margin: auto;
+  width: 100px;
+  height: 2px;
+  background: transparent;
+  background-position: -10px 0;
+  border: 0px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  
+  &:before {
+    content: '';
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    animation: at-loading-loader 4s ease-out infinite; 
+    background: linear-gradient(to right, #858585 0%,#272727 50%,#d2d2d2 50%,#d2d2d2 100%);
+  }
+}
+
+@keyframes at-loading-loader {
+  0% {
+    left: -100%;
+  }
+  75% {
+    left: -5%;
+  }
+  85% {
+    left: -5%;
+  }
+  95% {
+    left: 0;
+  }
+}

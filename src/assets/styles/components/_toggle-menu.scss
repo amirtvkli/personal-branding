@@ -1,0 +1,51 @@
+@import '../variables';
+
+.toggle__menu{
+    background: transparent;
+    border: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    .toggle__menu__icon{
+        display: inline-block;
+        margin-right: .3rem;
+        vertical-align: middle;
+    }
+    .toggle__menu__icon::before,.toggle__menu__icon::after{
+        display: block;
+        background: $primary-foreground-color;
+        content: "";
+        width: 20px;
+        height: 1px;
+    }
+    .toggle__menu__icon::after{
+        margin-top: 5px;
+    }
+    .toggle__menu__txt{
+        font-size: $small;
+        display: inline-block;
+        transition: letter-spacing .5s ease;
+        width: 3rem;
+        a{
+
+            color:$primary-foreground-color;
+        }
+    }
+    .toggle__menu__txt:hover{
+        letter-spacing: 3px;
+    }
+    .__close::before,.__close::after{
+        background-color:white;
+    }
+    .__close:before {
+        transform: rotate(20deg);
+    }
+    .__close:after {
+        transform: rotate(-20deg);
+        margin-top: -.5px;
+    }
+    .__close a{
+        color: white;
+    }
+}

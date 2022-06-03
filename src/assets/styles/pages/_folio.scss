@@ -1,0 +1,12 @@
+@import './variables';
+
+.at-folio {
+  text-align: center;
+  padding: 24px;
+  max-width: 620px;
+  .at-folio__img {
+    // text-align: justify;
+    width: 100px;
+    border-radius: 50%;
+  }
+}

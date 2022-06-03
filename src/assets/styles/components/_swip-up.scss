@@ -1,0 +1,18 @@
+.at-swip-up {
+  padding-top: 32px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    animation: at-swip-up 1s ease-in-out infinite;
+}
+
+@keyframes at-swip-up {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

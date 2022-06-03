@@ -1,0 +1,14 @@
+.header{
+    height: 80px;
+    display: flex;
+    flex-flow: row;
+    padding: 0 24px;
+    vertical-align: middle;
+    justify-content: center;
+    .spacer{
+        flex: 1 0;
+    }
+    @include responsive('md'){
+        padding: 0 42px;
+    }
+}

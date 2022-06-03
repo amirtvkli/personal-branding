@@ -1,0 +1,28 @@
+.at-social-links {
+  text-align: center;
+  color:inherit;
+  .icon {
+    font-size: 14px;
+    color: inherit;
+    padding-left: 24px;
+    &:hover {
+      // width: 50px;
+      border-radius: 5px;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      animation: growth 0.51s ease-in-out both;
+    }
+    @keyframes growth {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0.9;
+      }
+    }
+  }
+  .icon:first-child{
+    padding-left: 0;
+  }
+}

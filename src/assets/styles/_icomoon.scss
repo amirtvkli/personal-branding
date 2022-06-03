@@ -30,33 +30,114 @@ $icon-goodreads: "\e900";
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  padding: 15px;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  &:hover {
-    // width: 50px;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    animation: growth .51s ease-in-out both;
-  } 
-}
-@keyframes growth{
-  0%   { opacity:0; }
-  100% { opacity:.9; }
-}
 
-.icon-setting {
+}
+$icon-home: "\e902";
+$icon-switch: "\e9b6";
+$icon-edge: "\eadc";
+$icon-cog: "\e994";
+$icon-earth: "\e9ca";
+$icon-cart: "\e93a";
+$icon-folder: "\e92f";
+$icon-phone: "\e942";
+$icon-location: "\e947";
+$icon-lock: "\e98f";
+$icon-unlocked: "\e990";
+$icon-eye: "\e9ce";
+$icon-eye-blocked: "\e9d1";
+$icon-cross: "\ea0f";
+$icon-checkmark: "\ea10";
+$icon-twitter: "\ea96";
+$icon-dribbble: "\eaa7";
+$icon-behance: "\eaa8";
+$icon-github: "\eab0";
+$icon-linkedin: "\eaca";
+$icon-goodreads: "\e901";
+$icon-skype: "\eac5";
+$icon-research-gate: "\e900";
+$icon-awwwards: "\e903";
+$icon-pexels: "\e904";
+
+
+
+
+.icon-home {
   &:before {
-    content: $icon-setting; 
+    content: $icon-home; 
   }
 }
-.icon-instagram {
+.icon-switch {
   &:before {
-    content: $icon-instagram; 
+    content: $icon-switch; 
+  }
+}
+.icon-edge {
+  &:before {
+    content: $icon-edge; 
+  }
+}
+.icon-cog {
+  &:before {
+    content: $icon-cog; 
+  }
+}
+.icon-earth {
+  &:before {
+    content: $icon-earth; 
+  }
+}
+.icon-cart {
+  &:before {
+    content: $icon-cart; 
+  }
+}
+.icon-folder {
+  &:before {
+    content: $icon-folder; 
+  }
+}
+.icon-phone {
+  &:before {
+    content: $icon-phone; 
+  }
+}
+.icon-location {
+  &:before {
+    content: $icon-location; 
+  }
+}
+.icon-lock {
+  &:before {
+    content: $icon-lock; 
+  }
+}
+.icon-unlocked {
+  &:before {
+    content: $icon-unlocked; 
+  }
+}
+.icon-eye {
+  &:before {
+    content: $icon-eye; 
+  }
+}
+.icon-eye-blocked {
+  &:before {
+    content: $icon-eye-blocked; 
+  }
+}
+.icon-cross {
+  &:before {
+    content: $icon-cross; 
+  }
+}
+.icon-checkmark {
+  &:before {
+    content: $icon-checkmark; 
   }
 }
 .icon-twitter {
@@ -64,7 +145,11 @@ $icon-goodreads: "\e900";
     content: $icon-twitter; 
   }
 }
-
+.icon-dribbble {
+  &:before {
+    content: $icon-dribbble; 
+  }
+}
 .icon-behance {
   &:before {
     content: $icon-behance; 
@@ -81,7 +166,28 @@ $icon-goodreads: "\e900";
   }
 }
 .icon-goodreads {
-  &::before {
-    content: $icon-goodreads;
+  &:before {
+    content: $icon-goodreads; 
   }
 }
+.icon-skype {
+  &:before {
+    content: $icon-skype; 
+  }
+}
+.icon-research-gate {
+  &:before {
+    content: $icon-research-gate; 
+  }
+}
+.icon-awwwards {
+  &:before {
+    content: $icon-awwwards; 
+  }
+}
+.icon-pexels {
+  &:before {
+    content: $icon-pexels; 
+  }
+}
+
