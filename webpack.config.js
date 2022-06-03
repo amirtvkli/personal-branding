@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -17,13 +17,13 @@ let pathsToClean = [
     'public'
 ];
 
-let patterns = [
-    { from: './manifest.json', to: 'manifest.json' },
-    { from: './browserconfig.xml', to: 'browserconfig.xml' },
-    //{ from: 'assets/images/favicon/android-chrome-192x192.png', to: 'assets/images/android-chrome-192x192.png' },
-    // { from: 'assets/images/favicon/android-chrome-256x256.png', to: 'assets/images/android-chrome-256x256.png' },
-    // { from: 'assets/images/favicon/mstile-150x150.png', to: 'assets/images/mstile-150x150.png' }
-];
+// let patterns = [
+//     { from: './manifest.json', to: 'manifest.json' },
+//     { from: './browserconfig.xml', to: 'browserconfig.xml' },
+//     //{ from: 'assets/images/favicon/android-chrome-192x192.png', to: 'assets/images/android-chrome-192x192.png' },
+//     // { from: 'assets/images/favicon/android-chrome-256x256.png', to: 'assets/images/android-chrome-256x256.png' },
+//     // { from: 'assets/images/favicon/mstile-150x150.png', to: 'assets/images/mstile-150x150.png' }
+// ];
 
 const pug = {
     test: /\.pug$/,
@@ -154,7 +154,7 @@ module.exports = env => {
                 title: 'Medal'
             }),
             new CleanWebpackPlugin(pathsToClean),
-            new CopyWebpackPlugin([ ...patterns ]),
+            // new CopyWebpackPlugin([ ...patterns ]),
             new webpack.ProvidePlugin({
                 $: 'jquery',
                 jQuery: 'jquery',
@@ -163,7 +163,7 @@ module.exports = env => {
             }), 
             new HtmlWebpackPlugin({
                 filename: 'index.html',
-                template: 'src/app/index.pug',
+                template: 'src/app/index.html',
                 hash: true,
                 inject: false
             }),
